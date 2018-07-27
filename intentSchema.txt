@@ -1,0 +1,156 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "insurance buddy",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "want to cancel",
+                        "wanna cancel",
+                        "please cancel",
+                        "cancel please",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "want help",
+                        "please help",
+                        "help please",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "want to stop",
+                        "wanna stop",
+                        "please stop",
+                        "stop please",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "RatePolicyIntent",
+                    "slots": [
+                        {
+                            "name": "travelCost",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "departureDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "returnDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "destinationCountry",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "planName",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        },
+                        {
+                            "name": "planType",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "rate please",
+                        "quote please",
+                        "Give quote of professional liability insuranace please",
+                        "Give quote of travel insuranace please",
+                        "Give rate please",
+                        "Give quote please"
+                    ]
+                },
+                {
+                    "name": "GeneratePolicyDocumentIntent",
+                    "slots": [],
+                    "samples": [
+                        "policy document",
+                        "Issue policy document",
+                        "Generate policy document",
+                        "Generate policy document please",
+                        "Issue policy document please"
+                    ]
+                },
+                {
+                    "name": "IssuePolicyIntent",
+                    "slots": [],
+                    "samples": [
+                        "Issue travel policy"
+                    ]
+                },
+                {
+                    "name": "SendPolicyReminderIntent",
+                    "slots": [],
+                    "samples": [
+                        "policy reminder",
+                        "Set policy reminder please",
+                        "Send policy reminder please"
+                    ]
+                },
+                {
+                    "name": "GenerateLeadIntent",
+                    "slots": [],
+                    "samples": [
+                        "Send leed report please",
+                        "Generate lead please"
+                    ]
+                },
+                {
+                    "name": "GenerateSalesReportIntent",
+                    "slots": [],
+                    "samples": [
+                        "Generate sales report of this month please",
+                        "Generate sales report of this week please",
+                        "Generate sales report of today please",
+                        "Generate sales report please"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RatePolicyIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.149824193142"
+                    },
+                    "slots": [
+                        {
+                            "name": "travelCost",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.149824193142",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to continue ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
